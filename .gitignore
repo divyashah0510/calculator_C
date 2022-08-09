@@ -1,0 +1,4 @@
+/mylog.log
+*.log
+*.exe
+logs/
