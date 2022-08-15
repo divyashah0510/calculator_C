@@ -1,2 +1,2 @@
-# calculator_mini_project
+# calculator_C
 This is a user driven calculator but restricted 
