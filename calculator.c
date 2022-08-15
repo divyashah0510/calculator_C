@@ -29,7 +29,7 @@ void main()
     {int choice;
     printf("Enter your choice for following:\n");
     printf("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Power\n6.modulus\n7.squareroot\n8.factorial");
-    printf("Feed in your choice:\n");
+    printf("\nFeed in your choice:\n");
     scanf("%d",&choice);
     int decision;
         
@@ -205,7 +205,7 @@ int add4()
 {
     int add1,add2,add3,add4,add5,sum;
     printf("Enter five numbers:");
-    scanf("%d\n%d\n%d\n%d\n%d\n",&add1,&add2,&add3,&add4,&add5);
+    scanf("%d\n%d\n%d\n%d\n%d",&add1,&add2,&add3,&add4,&add5);
     sum=add1+add2+add3+add4+add5;
     printf("The sum is %d",sum);
     return sum;
