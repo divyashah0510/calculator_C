@@ -284,38 +284,44 @@ int multiply4()
 }
 int divide1()
 {
-    double add1,add2,sum;
+    float add1,add2,sum;
     printf("Enter two numbers:\n");
     scanf("%f\n%f",&add1,&add2);
     sum=add1/add2;
-    printf("The division is %d",sum);
+    printf("The division is %f",sum);
     return sum;
 }
 int divide2()
 {
-    double add1,add2,add3,sum;
+    float add1,add2,add3,sum,div;
     printf("Enter three numbers:\n");
     scanf("%f\n%f\n%f",&add1,&add2,&add3);
-    sum=(add1/add2)/add3;
-    printf("The division is %d",sum);
+    sum=(add1/add2);
+    div=sum/add3;
+    printf("The division is %f",div);
     return sum;
 }
 int divide3()
 {
-    double add1,add2,add3,add4,sum;
+    float add1,add2,add3,add4,sum,div,div1;
     printf("Enter four numbers:\n");
     scanf("%f\n%f\n%f\n%f",&add1,&add2,&add3,&add4);
-    sum=((add1/add2)/add3)/add4;
-    printf("The division is %d",sum);
+    sum=(add1/add2);
+    div=sum/add3;
+    div1=div/add4;
+    printf("The division is %f",div1);
     return sum;
 }
 int divide4()
 {
-    double add1,add2,add3,add4,add5,sum;
+    float add1,add2,add3,add4,add5,sum,div,div1,div2;
     printf("Enter five numbers:\n");
     scanf("%f\n%f\n%f\n%f\n%f",&add1,&add2,&add3,&add4,&add5);
-    sum=(((add1/add2)/add3)/add4)/add5;
-    printf("The division is %d",sum);
+    sum=(add1/add2);
+    div=sum/add3;
+    div1=div/add4;
+    div2=div1/add5;
+    printf("The division is %f",div2);
     return sum;
 }
 void power()
