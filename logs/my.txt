@@ -1,0 +1,1069 @@
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise
+$ git config --globa user.name
+Divya
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise
+$ git config --global user.email
+ds3636005@gmail.com
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise
+$ git init
+Initialized empty Git repository in C:/Users/Divya Shah/OneDrive/Desktop/git_practise/.git/
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls -lart
+total 12
+drwxr-xr-x 1 Divya Shah 197121    0 Aug  8 20:27 ../
+-rw-r--r-- 1 Divya Shah 197121 2573 Aug  8 23:37 hello.html
+drwxr-xr-x 1 Divya Shah 197121    0 Aug  8 23:38 ./
+drwxr-xr-x 1 Divya Shah 197121    0 Aug  8 23:38 .git/
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add hello.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.html
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit
+[master (root-commit) 873db9d] Initial Commit
+ 1 file changed, 58 insertions(+)
+ create mode 100644 hello.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ touch hello.cpp
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ touch hello.java
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ touch hello.c
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.c
+        hello.cpp
+        hello.exe
+        hello.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello.c
+        new file:   hello.cpp
+        new file:   hello.exe
+        new file:   hello.java
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello.c
+        new file:   hello.cpp
+        new file:   hello.exe
+        new file:   hello.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello.c
+        new file:   hello.cpp
+        new file:   hello.exe
+        new file:   hello.java
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit -m "Added more file with one unwanted file .exe"
+[master ac27481] Added more file with one unwanted file .exe
+ 4 files changed, 23 insertions(+)
+ create mode 100644 hello.c
+ create mode 100644 hello.cpp
+ create mode 100644 hello.exe
+ create mode 100644 hello.java
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ giit checkout hello.c
+bash: giit: command not found
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout hello.c
+Updated 0 paths from the index
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout hello.c
+Updated 1 path from the index
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+        modified:   hello.cpp
+        modified:   hello.html
+        modified:   hello.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout -f
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+    Initial Commit
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log -p -1
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+diff --git a/hello.c b/hello.c
+new file mode 100644
+index 0000000..a4205bc
+--- /dev/null
++++ b/hello.c
+@@ -0,0 +1,8 @@
++#include<stdio.h>
++void main()
++{
++    int a;
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git def
+git: 'def' is not a git command. See 'git --help'.
+
+The most similar command is
+        diff
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log -p -1
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+diff --git a/hello.c b/hello.c
+new file mode 100644
+index 0000000..a4205bc
+--- /dev/null
++++ b/hello.c
+@@ -0,0 +1,8 @@
++#include<stdio.h>
++void main()
++{
++    int a;
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git diff
+diff --git a/hello.c b/hello.c
+index a4205bc..9f9b09f 100644
+--- a/hello.c
++++ b/hello.c
+@@ -5,4 +5,6 @@ void main()
+     printf("Hello World!\n");
+     scanf("%d",&a);
+     printf("%d",a+a);
++    printf("Hello!");
++
+ }
+\ No newline at end of file
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git diff
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git diff
+diff --git a/hello.c b/hello.c
+index 9f9b09f..696dacf 100644
+--- a/hello.c
++++ b/hello.c
+@@ -5,6 +5,6 @@ void main()
+     printf("Hello World!\n");
+     scanf("%d",&a);
+     printf("%d",a+a);
+-    printf("Hello!");
++    printf("Hello1!");
+
+ }
+\ No newline at end of file
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git diff
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.c
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git diff --staged
+diff --git a/hello.c b/hello.c
+index a4205bc..696dacf 100644
+--- a/hello.c
++++ b/hello.c
+@@ -5,4 +5,6 @@ void main()
+     printf("Hello World!\n");
+     scanf("%d",&a);
+     printf("%d",a+a);
++    printf("Hello1!");
++
+ }
+\ No newline at end of file
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.c
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout -f
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit -a -m "Skipped staging area and beautified the code a little bit"
+[master ddb52b0] Skipped staging area and beautified the code a little bit
+ 1 file changed, 1 insertion(+)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+    Skipped staging area and beautified the code a little bit
+
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+:...skipping...
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+    Skipped staging area and beautified the code a little bit
+
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+    Initial Commit
+:...skipping...
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+    Skipped staging area and beautified the code a little bit
+
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+    Initial Commit
+~
+(END)...skipping...
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+    Skipped staging area and beautified the code a little bit
+
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+    Initial Commit
+~
+~
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+    Skipped staging area and beautified the code a little bit
+
+commit ac27481996ae3c673b6810311d4d4a99e1eba9ee
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:51:22 2022 +0530
+
+    Added more file with one unwanted file .exe
+
+commit 873db9d0c921ebda53bf57519933aacbf5504279
+Author: Divya <ds3636005@gmail.com>
+Date:   Mon Aug 8 23:40:08 2022 +0530
+
+    Initial Commit
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ q
+bash: q: command not found
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls
+hello.c  hello.cpp  hello.exe*  hello.html  hello.java
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit -a -m "Adding Waste"
+[master 5072a65] Adding Waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 waste.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls
+hello.c  hello.cpp  hello.exe*  hello.html  hello.java  waste.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git rm --cached waste.html
+rm 'waste.html'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls
+hello.c  hello.cpp  hello.exe*  hello.html  hello.java  waste.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git rm waste.html
+rm 'waste.html'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit -a -m "Removing waste.html name file"
+[master c35c73d] Removing waste.html name file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 waste.html
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.c
+        modified:   hello.cpp
+        modified:   hello.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status -s
+ M hello.c
+ M hello.cpp
+ M hello.java
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout -f
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ touch .gitignore
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        logs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        logs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/mylog.log
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/mylog.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/mylog.log
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/mylog.log
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/mylog.log
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git rm --cached logs/mylog.log
+rm 'logs/mylog.log'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        logs/
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add .gitignore
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls
+hello.c  hello.cpp  hello.exe*  hello.html  hello.java  logs/
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ls
+hello.c  hello.cpp  hello.exe*  hello.html  hello.java  logs/
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git commit -a -m "commit message"
+[master 508b7ad] commit message
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log
+commit 508b7ad09f09b4af19218f46cf2c61b6a4fa68b1 (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:28:40 2022 +0530
+
+    commit message
+
+commit c35c73daba81c5d7f4f4deae4cdb06f0b1a80d7c
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:13:47 2022 +0530
+
+    Removing waste.html name file
+
+commit 5072a659d8ff4855b1da8b3295252417b682948d
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:10:55 2022 +0530
+
+    Adding Waste
+
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:05:42 2022 +0530
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git branch hello
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git branch
+  hello
+* master
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout hello
+Switched to branch 'hello'
+M       .gitignore
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git status
+On branch hello
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.cpp
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git add -A
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git commit -m"Fixed brackets"
+[hello 8ae5137] Fixed brackets
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git status
+On branch hello
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git status
+On branch hello
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git checkout master
+Switched to branch 'master'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout hello
+Switched to branch 'hello'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git commit -a -m "Added comment"
+[hello 38212b2] Added comment
+ 1 file changed, 1 insertion(+)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git status
+On branch hello
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (hello)
+$ git checkout master
+Switched to branch 'master'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git checkout master
+Already on 'master'
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log
+commit 508b7ad09f09b4af19218f46cf2c61b6a4fa68b1 (HEAD -> master)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:28:40 2022 +0530
+
+    commit message
+
+commit c35c73daba81c5d7f4f4deae4cdb06f0b1a80d7c
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:13:47 2022 +0530
+
+    Removing waste.html name file
+
+commit 5072a659d8ff4855b1da8b3295252417b682948d
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:10:55 2022 +0530
+
+    Adding Waste
+
+commit ddb52b07c8d048b7453648d109d268c6e5ab571e
+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ \
+>
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git merge hello
+Updating 508b7ad..38212b2
+Fast-forward
+ .gitignore | 3 ++-
+ hello.cpp  | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git log -p -2
+commit 38212b2a4fead88faa44f64ed2874fb4e868fea0 (HEAD -> master, hello)
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:44:17 2022 +0530
+
+    Added comment
+
+diff --git a/hello.cpp b/hello.cpp
+index 8c1cd2b..82775e6 100644
+--- a/hello.cpp
++++ b/hello.cpp
+@@ -1,3 +1,4 @@
++//This file has been modified in hello branh
+ #include<iostream>
+ using namespace std;
+
+
+commit 8ae5137dfe60aee63b9a08113b92ae309e6b0459
+Author: Divya <ds3636005@gmail.com>
+Date:   Tue Aug 9 00:40:46 2022 +0530
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote add origin https://github.com/divyashah0510/Finally-git-in-one-video.git
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote
+origin
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote -v
+origin  https://github.com/divyashah0510/Finally-git-in-one-video.git (fetch)
+origin  https://github.com/divyashah0510/Finally-git-in-one-video.git (push)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git push origin master
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (26/26), 19.45 KiB | 4.86 MiB/s, done.
+Total 26 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/divyashah0510/Finally-git-in-one-video/pull/new/master
+remote:
+To https://github.com/divyashah0510/Finally-git-in-one-video.git
+ * [new branch]      master -> master
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ssh-keygen -t ed25519 -C "ds3636005@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/Divya Shah/.ssh/id_ed25519):
+Created directory '/c/Users/Divya Shah/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Divya Shah/.ssh/id_ed25519
+Your public key has been saved in /c/Users/Divya Shah/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:61Jxzkau0h8vKQgf5Kzx+YowY69JPSyV0mFSjK4JeOs ds3636005@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|   o.            |
+|  ...            |
+|... o            |
+|o o+ o. . o      |
+|.+..++  SB       |
+|o .=o + ..=      |
+| .B +* *.o..     |
+| oEB.oB.+ oo     |
+|  o.o .=oo...    |
++----[SHA256]-----+
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ eval "$(ssh-agent -s)"
+Agent pid 1759
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ ssh-add ~/.ssh/id_ed25519
+Identity added: /c/Users/Divya Shah/.ssh/id_ed25519 (ds3636005@gmail.com)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFI3EzXyFvPEaqXS6y3+97dSBbDyEunsRPLpbr9OfMaP ds3636005@gmail.com
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote set-url origin git@github.com:divyashah0510/Finally-git-in-one-video.git
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote
+origin
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git remote -v
+origin  git@github.com:divyashah0510/Finally-git-in-one-video.git (fetch)
+origin  git@github.com:divyashah0510/Finally-git-in-one-video.git (push)
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git push -origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$ git push -u origin hello
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'hello' on GitHub by visiting:
+remote:      https://github.com/divyashah0510/Finally-git-in-one-video/pull/new/hello
+remote:
+To github.com:divyashah0510/Finally-git-in-one-video.git
+ * [new branch]      hello -> hello
+branch 'hello' set up to track 'origin/hello'.
+
+Divya Shah@DESKTOP-ICEILQH MINGW64 ~/OneDrive/Desktop/git_practise (master)
+$
